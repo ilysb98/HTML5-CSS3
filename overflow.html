@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>overflow</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        /* 1920*1080 */
+        background-color: beige;
+        width: 2000px;
+        height: 1500px;
+        overflow-x: hidden;
+        /* x축의 넘치는 내용을 어떻게 보여주는 지 결정하는 속성 */
+        overflow-y: hidden;
+        /* y 축의 넘치는 내용을 어떻게 보여주는 지 결정하는 속성 */
+      }
+      .contents1 {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #000;
+        float: left;
+        margin: 10px;
+      }
+
+      .contents2 {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #000;
+        float: left;
+        margin: 10px;
+      }
+      .contents3 {
+        width: 200px;
+        /* height: 200px; */
+        border: 2px solid #000;
+        float: left;
+        margin: 10px;
+        overflow: hidden;
+        /* 영역을 벗어나는 부분을 보이지 않게 처리! - height 값이 존재하지 않을 때 높이를 대신함 */
+      }
+      .contents4 {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #000;
+        float: left;
+        margin: 10px;
+        /* overflow: hidden; */
+        /* 폭 값이 존재할 때 내용물을 안 보이게 처리  */
+        overflow: scroll;
+        /* 안에 컨텐츠가 넘치는 경우 스크롤 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- overflow: 부모박스에서 내용물이 넘치는 경우 어떻게 보여지는 지 결정하는 속성 -->
+    <div class="contents1">
+      <h4>컨텐츠 양이 일정</h4>
+      <p>
+        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit..." "There is no one who loves pain itself,
+        who seeks after it and wants to have it, simply because it is pain..."
+      </p>
+    </div>
+
+    <div class="contents2">
+      <h4>컨텐츠 양이 많거나 유동 - 흘러넘침</h4>
+      <p>
+        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit..." "There is no one who loves pain itself,
+        who seeks after it and wants to have it, simply because it is pain..."
+        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit..." "There is no one who loves pain itself,
+        who seeks after it and wants to have it, simply because it is pain..."
+      </p>
+    </div>
+
+    <div class="contents3">
+      <h4>컨텐츠 양에 따라서 높이가 늘어남</h4>
+      <p>
+        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit..." "There is no one who loves pain itself,
+        who seeks after it and wants to have it, simply because it is pain..."
+        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit..." "There is no one who loves pain itself,
+        who seeks after it and wants to have it, simply because it is pain..."
+      </p>
+    </div>
+
+    <div class="contents4">
+      <h4>박스의 높이에 따라 콘텐츠가 안 보이게 처리</h4>
+      <p>
+        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit..." "There is no one who loves pain itself,
+        who seeks after it and wants to have it, simply because it is pain..."
+        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit..." "There is no one who loves pain itself,
+        who seeks after it and wants to have it, simply because it is pain..."
+      </p>
+    </div>
+  </body>
+</html>
