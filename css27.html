@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position_실전 레이아웃</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      img {
+        display: block;
+      }
+
+      body {
+        background-color: #808080;
+      }
+
+      #wrap {
+        width: 1600px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      nav {
+        width: 200px;
+        height: 100%;
+        position: fixed;
+        background-color: #0000;
+      }
+
+      section {
+        width: 1400px;
+        height: 100%;
+        position: relative;
+        background-color: yellow;
+        /* float: right; - 오른쪽으로부터 정렬*/
+        top: 0;
+        left: 200px;
+        overflow: hidden;
+      }
+
+      .main {
+        width: 1200px;
+        overflow: hidden;
+        position: relative;
+        margin: 50px auto;
+        /* 1400-1200=200/2=100 */
+        height: 399px;
+      }
+
+      button {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        border: none;
+        border-radius: 50%;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -50px;
+        margin-top: -50px;
+      }
+
+      .banner {
+        width: 1160px;
+        /* img(250*4)=1000 + margin(좌우40*4)=160 */
+        overflow: hidden;
+        margin: 30px auto;
+      }
+
+      .banner img {
+        float: left;
+        margin: 0 20px;
+        margin-bottom: 40px;
+        box-shadow: 3px 3px 10px green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 전체 박스 -->
+    <div id="wrap">
+      <nav>
+        <img src="img27/menu.jpg" alt="메뉴" />
+      </nav>
+
+      <section>
+        <div class="main">
+          <img src="img27/main_pic.jpg" alt="" />
+          <button type="button">▶️</button>
+        </div>
+
+        <div class="banner">
+          <img src="img27/bn1.jpg" alt="대체이미지" />
+          <img src="img27/bn2.jpg" alt="대체이미지" />
+          <img src="img27/bn3.jpg" alt="대체이미지" />
+          <img src="img27/bn4.jpg" alt="대체이미지" />
+          <img src="img27/bn5.jpg" alt="대체이미지" />
+          <img src="img27/bn6.jpg" alt="대체이미지" />
+          <img src="img27/bn7.jpg" alt="대체이미지" />
+          <img src="img27/bn8.jpg" alt="대체이미지" />
+          <img src="img27/bn9.jpg" alt="대체이미지" />
+          <img src="img27/bn10.jpg" alt="대체이미지" />
+          <img src="img27/bn11.jpg" alt="대체이미지" />
+          <img src="img27/bn12.jpg" alt="대체이미지" />
+        </div>
+      </section>
+    </div>
+    <!-- //전체 박스 -->
+  </body>
+</html>
